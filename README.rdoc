@@ -1,0 +1,40 @@
+= Bacon_FS
+
+Matchers for Bacon, https://github.com/chneukirchen/bacon/, when interacting with files.
+
+== Install
+
+In your Gemfile:
+
+= begin rdoc
+gem 'Bacon_FS'
+=end
+
+== Usage:
+
+= begin rdoc
+require 'Bacon_FS'
+include Bacon_FS::DSL
+
+describe 'My home files.' do
+
+  it 'should be a file' do
+    "~/.bashrc".should.be file
+  end
+
+  it 'should be a directory' do
+    "~/.ssh".should.be directory
+  end
+  
+end
+
+=end
+
+
+
+== Copyright
+
+Copyright (c) 2011 da99. See LICENSE.txt for
+further details.
+
+
