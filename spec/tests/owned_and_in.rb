@@ -8,7 +8,8 @@ describe ":owned_and_in" do
   end
 
   it 'must return true if file is owned and in group of user' do
-    @bx.owned_and_in(@user).call(FILE).should.be == true
+    @bx.owned_and_in(@user).call(FILE)
+    .should.be == true
   end
   
   it 'must return false if file is owned and in group of wrong user' do

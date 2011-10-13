@@ -14,16 +14,19 @@ gem 'Bacon_FS'
 
 = begin rdoc
 require 'Bacon_FS'
-include Bacon_FS::DSL
 
 describe 'My home files.' do
 
+  before {
+    include Bacon_FS::DSL
+  } 
+  
   it 'should be a file' do
-    "~/.bashrc".should.be file
+    "~/.bashrc".should.be.a file
   end
 
   it 'should be a directory' do
-    "~/.ssh".should.be directory
+    "~/.ssh".should.be.a directory
   end
   
 end

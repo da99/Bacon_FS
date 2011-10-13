@@ -5,7 +5,8 @@ describe ":a_file" do
   behaves_like 'box'
 
   it 'must return true if file exists' do
-    @bx.file.call(FILE).should.be == true
+    @bx.file.call(FILE)
+    .should.be == true
   end
 
   it 'must return false if file is a directory' do

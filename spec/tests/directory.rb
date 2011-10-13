@@ -1,10 +1,11 @@
 
-describe ":a_directory" do
+describe ":directory" do
   
   behaves_like 'box'
 
   it 'must return true if directory exists' do
-    @bx.directory.call(FOLDER).should.be == true
+    @bx.directory.call(FOLDER)
+    .should.be == true
   end
 
   it 'must return false if directory is a file' do
