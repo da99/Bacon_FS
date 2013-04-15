@@ -43,7 +43,7 @@ module Bacon_FS
       raise "No ls listings for #{raw_path}: #{results.inspect}" if results.size != 1
 
       pieces = results.first.split
-			[ pieces[0], pieces[2], pieces[3] ]
+      [ pieces[0], pieces[2], pieces[3] ]
     end
     
     def have_key key
